@@ -5,20 +5,20 @@
 이를 통해 반복적인 분석 작업을 빠르게 수행하고, 프로그램 구조와 동작을 이해할 수 있습니다.
 
 ## 주요 기능
-기본 PE 정보 분석기능
-섹션(Section) 구조 분석기능
-Import DLL 목록 출력기능
-GUI 제공
+기본 PE 정보 분석기능<br>
+섹션(Section) 구조 분석기능<br>
+Import DLL 목록 출력기능<br>
+GUI 제공<br>
 
 ## 기술 스택
 
 ### Language
-Python 3.x
+Python 3<br>
 ### Libraries
-pefile : PE 헤더 및 구조 분석
-lief : 실행 파일 구조 파싱
-tkinter : GUI 구성
-re : 문자열 추출
+pefile : PE 헤더 및 구조 분석<br>
+lief : 실행 파일 구조 파싱<br>
+tkinter : GUI 구성<br>
+re : 문자열 추출<br>
 
 ## 주의 사항
 ※ 본 소프트웨어는 학습/연구용으로 제작되었으며, 실제 악성코드 분석 등 전문 용도로 사용될 수 없습니다.
