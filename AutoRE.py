@@ -8,7 +8,7 @@ def analyze_pe(file_path):
     result = []
 
     try:
-        pe = pefile.PE(file_path)
+        pe = pefile.PE(file_path) # PE = 파일(exe) 전체 설계도 
         binary = lief.parse(file_path)
 
         result.append("[+] 기본 정보")
@@ -17,13 +17,13 @@ def analyze_pe(file_path):
         result.append(f"실행 환경: {pe.OPTIONAL_HEADER.Subsystem}")
         result.append("")
 
-        result.append("[+] 섹션 정보")
+        result.append("[+] 섹션 정보") # 섹션 = 역할별 공간
         for section in pe.sections:
             name = section.Name.decode(errors="ignore").strip("\x00")
             result.append(f"{name} | Size: {section.Misc_VirtualSize}")
         result.append("")
 
-        result.append("[+] Import DLL 목록")
+        result.append("[+] Import DLL 목록") # DLL = 외부 기능
         if hasattr(pe, 'DIRECTORY_ENTRY_IMPORT'):
             for entry in pe.DIRECTORY_ENTRY_IMPORT:
                 result.append(entry.dll.decode())
